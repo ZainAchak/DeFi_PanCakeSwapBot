@@ -7,4 +7,120 @@ Run command "Python DeFiTranscation.py"
 3-  Create Virtual Environment  --> python -m venv defi-env
 4-  Install the Requirments --> pip install -r requirements.txt
 
+<!--
+*** Thanks for checking out the DeFi PancakeSwap Bot. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Thanks again! Now go TRADE! :D
+-->
+
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using Python 3.9
+-->
+[![LinkedIn][linkedin-shield]]["https://www.linkedin.com/in/zain-ullah-466aa4125/"]
+
+
+<br />
+<p align="center">
+  <a href="https://github.com/ZainAchak/DeFi_PanCakeSwapBot">
+    <img src="Defi_PancakeBot.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Best-README-Template</h3>
+
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <br />
+    <br />
+    <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">View Demo on Youtube</a>
+  </p>
+</p>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## DeFi PancakeSwap Bot 
+
+Decentralized market is too volatile to trade, So I have come up with this BOT so you can get more profit by selling and buying tokens at better prices, also the trade will be executed in seconds.
+
+Defi PancakeSwap BOT is programmed in Python to buy and sell tokens once the target is hit, or can also be automated.
+
+Let me know if you get unexpected errors so that I can update the code because it has a lot of scenarios to cover.
+
+* Watch a Youtube Video to know how it actually works:
+  ```sh
+  https://www.youtube.com/watch?v=cSel-wyrTFI
+  ```
+
+### Built With
+* [Python](https://www.python.org/)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+Follow the commands
+
+### Prerequisites
+* Go to path folder
+
+* Create a python virtual environment
+  ```sh
+  python -m venv defi-env
+  pip install -r requirements.txt
+  ```
+
+### Up and Running
+
+1. Go to Folder Path
+2. Type in Command Line
+   ```sh
+   python DeFiTranscation.py
+   ```
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_username) - zainullahachakzai@gmail.com
+
+Project Link: [https://github.com/ZainAchak/DeFi_PanCakeSwapBot](https://github.com/ZainAchak/DeFi_PanCakeSwapBot)
 
