@@ -20,3 +20,6 @@ def enumHandler(hwnd, lParam):
 
 def changeCmdPosition():
     win32gui.EnumWindows(enumHandler, None)
+    
+    
+    #eof
