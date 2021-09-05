@@ -22,6 +22,7 @@ from ThreadingWithReturn import ThreadWithResult
 from abi import tokenAbi
 from sendWhatsappMessage import sendMessage
 import config as config
+from decimalData import getTokenDecimal
 
 bsc = 'https://bsc-dataseed.binance.org/'
 web3 = Web3(Web3.HTTPProvider(bsc))
@@ -38,6 +39,7 @@ TokenToSellAddress = web3.toChecksumAddress(address)
 WBNB_Address = web3.toChecksumAddress(config.WBNB_ADDRESS)
 pancakeRouterAddress = web3.toChecksumAddress(config.PANCAKE_ROUTER_ADDRESS)
 walletAddress = config.YOUR_WALLET_ADDRESS
+TradingTokenDecimal = None
 
 # To clear command line
 clear = lambda: system("cls")
@@ -56,6 +58,7 @@ def showTx(url):
 def InitializeTrade():
     global driver
     global TokenToSellAddress
+    global TradingTokenDecimal
     # Getting ABI
     sellTokenAbi = tokenAbi(TokenToSellAddress, driver)
     pancakeAbi = tokenAbi(pancakeRouterAddress, driver)
@@ -69,6 +72,11 @@ def InitializeTrade():
     # Create a contract for both PancakeRoute and Token to Sell
     contractPancake = web3.eth.contract(address=pancakeRouterAddress, abi=pancakeAbi)
     contractSellToken = web3.eth.contract(TokenToSellAddress, abi=sellTokenAbi)
+    if TradingTokenDecimal is None:
+        TradingTokenDecimal = contractSellToken.functions.decimals().call()
+        TradingTokenDecimal = getTokenDecimal(TradingTokenDecimal)
+        # print(TradingTokenDecimal)
+        # time.sleep(10)
 
     # Get current avaliable amount of tokens from the wallet
     NoOfTokens = contractSellToken.functions.balanceOf(walletAddress).call()
@@ -84,6 +92,7 @@ def InitializeTrade():
         'pancakeRouterAddress': pancakeRouterAddress,
         'TokenToSellAddress': TokenToSellAddress,
         'WBNB_Address': WBNB_Address,
+        'TradingTokenDecimal': TradingTokenDecimal
     }
     return BNB_balance, symbol, NoOfTokens, params
 
@@ -254,8 +263,16 @@ def runCode():
                         Down = float(input("Please Enter New Up Target Price: "))
                     time.sleep(2)
         else:
-            print("Invalid Input")
-        time.sleep(2)
+            clear()
+            print("Invalid Input Please input only *up, *down or *ud")
+            time.sleep(2)
+            print("Restarting Program")
+            time.sleep(1)
+            print("."); time.sleep(1)
+            print(".."); time.sleep(1)
+            print("..."); time.sleep(1)
+            runCode()
+        time.sleep(5)
 
 
 if __name__ == "__main__":
