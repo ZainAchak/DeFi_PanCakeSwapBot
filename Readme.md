@@ -11,7 +11,7 @@
   <h3 align="center">Defi PancakeSwap BOT</h3>
 
   <p align="center">
-    A BOT that will easy your life in Trading.
+    A BOT that will make easy your life in Trading.
     <br />
     <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">Watch tutorial on Youtube</a>
   </p>
