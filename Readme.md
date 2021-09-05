@@ -101,7 +101,7 @@ Contributions are what make the open source community such an amazing place to l
 <!-- CONTACT -->
 ## Contact
 
-ZainUllah Achakzai - zainullahachakzai@gmail.com
+Zain Ullah Achakzai for queries comment at --> https://www.youtube.com/watch?v=cSel-wyrTFI
 #### If you enjoyed the bot do give a Star :) 
 
 <!-- MARKDOWN LINKS & IMAGES -->
