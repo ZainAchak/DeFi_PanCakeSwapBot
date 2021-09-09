@@ -123,8 +123,11 @@ def runCode():
 
         # One time getting data for UP, DOWN or Both
         if not dataEntered:
-
-            title = page_soup.find_all("div", {"class": "css-p96wfd e1bv4b780"})[0].text
+            if updateData:
+                BNB_balance, TokenSymbol, NoOfTokens, params = InitializeTrade()
+                updateData = False
+                clear()
+            title = TokenSymbol
             clear()
             print("**============== Welcome to Defi Auto transaction Bot ===============**")
             print("\n** You can set alerts for Up, Down or Both Targets **")
@@ -146,10 +149,6 @@ def runCode():
                 target = float(input(f"Please Enter {upORdown} Target: "))
 
             dataEntered = True
-        if updateData:
-            BNB_balance, TokenSymbol, NoOfTokens, params = InitializeTrade()
-            updateData = False
-            clear()
 
         if Lasttrade_message is not None:
             print(f"\nLast Trade result: {Lasttrade_message}  \nTx : https://bscscan.com/tx/{tx}\n\n")
