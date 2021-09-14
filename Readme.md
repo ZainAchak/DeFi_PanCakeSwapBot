@@ -13,8 +13,10 @@
   <p align="center">
     A BOT that will make easy your life in Trading.
     <br />
-    <a href="https://www.dailymotion.com/video/k4eas3yz9wFXruxd3aG">Watch tutorial</a>
-  <b> Password 1234 </b>
+    <a href="https://www.dailymotion.com/video/k4eas3yz9wFXruxd3aG">Watch tutorial Link 1</a>
+    <a href="https://vimeo.com/604882001">Watch tutorial Link 1</a>
+    <br>
+    <b> Password 1234 </b>
     <!-- <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">Watch tutorial on Youtube</a> -->
   </p>
 </p>
