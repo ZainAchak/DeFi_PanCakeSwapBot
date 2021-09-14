@@ -14,7 +14,7 @@
     A BOT that will make easy your life in Trading.
     <br />
     <a href="https://www.dailymotion.com/video/k4eas3yz9wFXruxd3aG">Watch tutorial</a>
-    #### Password 1234
+  <b> Password 1234 </b>
     <!-- <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">Watch tutorial on Youtube</a> -->
   </p>
 </p>
