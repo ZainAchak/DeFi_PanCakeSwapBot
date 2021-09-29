@@ -13,8 +13,9 @@
   <p align="center">
     A BOT that will make easy your life in Trading.
     <br />
-    <a href="https://www.dailymotion.com/video/k4eas3yz9wFXruxd3aG">Watch tutorial Link 1</a><br>
-    <a href="https://vimeo.com/604882001">Watch tutorial Link 2</a>
+    <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">Watch tutorial on Youtube</a>
+   <!-- <a href="https://www.dailymotion.com/video/k4eas3yz9wFXruxd3aG">Watch tutorial Link 1</a><br> -->
+   <!-- <a href="https://vimeo.com/604882001">Watch tutorial Link 2</a> -->
     <br>
     <b> Password 1234 </b>
     <!-- <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">Watch tutorial on Youtube</a> -->
@@ -105,7 +106,7 @@ Contributions are what make the open source community such an amazing place to l
 <!-- CONTACT -->
 ## Contact
 
-<!-- For queries comment at  https://www.youtube.com/watch?v=cSel-wyrTFI -->
+For queries comment at  https://www.youtube.com/watch?v=cSel-wyrTFI
 #### If you enjoyed the bot do give a Star :) 
 
 <!-- MARKDOWN LINKS & IMAGES -->
