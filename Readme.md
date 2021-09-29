@@ -17,7 +17,7 @@
    <!-- <a href="https://www.dailymotion.com/video/k4eas3yz9wFXruxd3aG">Watch tutorial Link 1</a><br> -->
    <!-- <a href="https://vimeo.com/604882001">Watch tutorial Link 2</a> -->
     <br>
-    <b> Password 1234 </b>
+    <!-- <b> Password 1234 </b> -->
     <!-- <a href="https://www.youtube.com/watch?v=cSel-wyrTFI">Watch tutorial on Youtube</a> -->
   </p>
 </p>
