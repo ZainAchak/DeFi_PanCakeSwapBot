@@ -11,12 +11,14 @@ from os import system
 
 from bs4 import BeautifulSoup as bsp
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.chrome.options import Options
 from web3 import Web3
+from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
 
 from BuyTokens import buyTokens
-from CommandPromptVisuals import changeCmdPosition
+# from CommandPromptVisuals import changeCmdPosition
 from SellTokens import sellTokens
 from ThreadingWithReturn import ThreadWithResult
 from abi import tokenAbi
@@ -45,7 +47,8 @@ TradingTokenDecimal = None
 clear = lambda: system("cls")
 options = Options()
 options.headless = True
-driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+# options.add_argument("--enable-javascript")
+driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
 
 # Numbers to send Whatsapp web message
 numbersToNotify = ['+92*********']
@@ -63,11 +66,10 @@ def InitializeTrade():
     sellTokenAbi = tokenAbi(TokenToSellAddress, driver)
     pancakeAbi = tokenAbi(pancakeRouterAddress, driver)
 
-    # print(sellTokenAbi)
     # Enter you wallet Public Address
     BNB_balance = web3.eth.get_balance(walletAddress)
     BNB_balance = web3.fromWei(BNB_balance, 'ether')
-    print(f"Current BNB Balance: {web3.fromWei(BNB_balance, 'ether')}")
+    # print(f"Current BNB Balance: {web3.fromWei(BNB_balance, 'ether')}")
 
     # Create a contract for both PancakeRoute and Token to Sell
     contractPancake = web3.eth.contract(address=pancakeRouterAddress, abi=pancakeAbi)
@@ -75,14 +77,11 @@ def InitializeTrade():
     if TradingTokenDecimal is None:
         TradingTokenDecimal = contractSellToken.functions.decimals().call()
         TradingTokenDecimal = getTokenDecimal(TradingTokenDecimal)
-        # print(TradingTokenDecimal)
-        # time.sleep(10)
 
     # Get current avaliable amount of tokens from the wallet
     NoOfTokens = contractSellToken.functions.balanceOf(walletAddress).call()
     NoOfTokens = web3.fromWei(NoOfTokens, 'ether')
     symbol = contractSellToken.functions.symbol().call()
-    print(f"Current amount of {symbol} : {web3.fromWei(NoOfTokens, 'ether')}")
     params = {
         'symbol': symbol,
         'web3': web3,
@@ -108,25 +107,31 @@ def runCode():
     clear()
     time.sleep(3)
     dataEntered = False
+    updateDataCount = 0
     updateData = True
     Lasttrade_message = None
     tx = None
 
     # Change CMD Promt position
-    changeCmdPosition()
+    # changeCmdPosition()
 
     while True:
         # Getting Price
         page_soup = bsp(driver.page_source, features="lxml")
         price = float(page_soup.find_all("b", {"class": "number"})[0].text[1:].replace(",", ""))
-        clear()
 
-        # One time getting data for UP, DOWN or Both
+        """ If You want to update wallet tokens and BNB info after every 10 seconds Uncomment the code below """
+        # if updateDataCount == 10 or updateData:
+        #     clear()
+        #     BNB_balance, TokenSymbol, NoOfTokens, params = InitializeTrade()
+        #     updateDataCount = 0
+        #     updateData = False
+        #     clear()
+        # updateDataCount += 1
+
         if not dataEntered:
-            if updateData:
-                BNB_balance, TokenSymbol, NoOfTokens, params = InitializeTrade()
-                updateData = False
-                clear()
+            BNB_balance, TokenSymbol, NoOfTokens, params = InitializeTrade()
+
             title = TokenSymbol
             clear()
             print("**============== Welcome to Defi Auto transaction Bot ===============**")
@@ -155,8 +160,12 @@ def runCode():
         print(f"Token name: {title}")
         print(f"Total avaliable {TokenSymbol}: {NoOfTokens}")
         print(f"Account BNB balance: {BNB_balance}")
-        print("Current Price: {:.10f}".format(price))
-
+        print("Current BNB Price: {:.10f} $$".format(price))
+        if bool(config.SELL_TOKENS) and upORdown == 'up':
+            print(f"Token to SELL: {config.SELL_TOKENS}")
+        if bool(config.BUY_TOKENS) and upORdown == 'down':
+            print(f"Token to Buy from BNB: {config.BUY_TOKENS} BNB")
+        print(f"Current Token Price: {float(NoOfTokens) * float(price)} $$")
         if upORdown == 'ud':
             print("UP Target: {:.10f} $".format(Up))
             print("Down Target: {:.10f} $".format(Down))
@@ -267,11 +276,15 @@ def runCode():
             time.sleep(2)
             print("Restarting Program")
             time.sleep(1)
-            print("."); time.sleep(1)
-            print(".."); time.sleep(1)
-            print("..."); time.sleep(1)
+            print(".");
+            time.sleep(1)
+            print("..");
+            time.sleep(1)
+            print("...");
+            time.sleep(1)
             runCode()
-        time.sleep(5)
+        time.sleep(1)
+        clear()
 
 
 if __name__ == "__main__":
