@@ -80,7 +80,7 @@ def InitializeTrade():
 
     # Get current avaliable amount of tokens from the wallet
     NoOfTokens = contractSellToken.functions.balanceOf(walletAddress).call()
-    NoOfTokens = web3.fromWei(NoOfTokens, 'ether')
+    NoOfTokens = web3.fromWei(NoOfTokens, TradingTokenDecimal)
     symbol = contractSellToken.functions.symbol().call()
     params = {
         'symbol': symbol,
