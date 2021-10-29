@@ -108,8 +108,6 @@ Contributions are what make the open source community such an amazing place to l
 
 For queries comment at  https://www.youtube.com/watch?v=cSel-wyrTFI
 #### If you enjoyed the bot do give a Star :) 
-##### Buy me a Coffee 
-##### BNB Address: 0x9b482b5bbB6994528Bd90304D029Eb14A49Ec2f4
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
