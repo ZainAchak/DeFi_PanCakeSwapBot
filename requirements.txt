@@ -2,8 +2,8 @@ keyboard==0.13.5
 webdriver_manager==3.4.2
 pywhatkit==5.1
 selenium==3.141.0
-pywin32==301
+# pywin32==301
 web3==5.23.1
-PyAutoGUI==0.9.53
+# PyAutoGUI==0.9.53
 beautifulsoup4==4.9.3
-win32gui==221.6
+# win32gui==221.6
