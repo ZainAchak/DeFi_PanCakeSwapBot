@@ -107,7 +107,7 @@ Contributions are what make the open source community such an amazing place to l
 ## Contact
 
 For queries comment at  https://www.youtube.com/watch?v=cSel-wyrTFI
-#### If you enjoyed the bot do give a Star ⭐️ :) 
+<!-- #### If you enjoyed the bot do give a Star ⭐️ :) -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
