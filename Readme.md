@@ -9,7 +9,7 @@
   </a>
 
   <h3 align="center">Defi PancakeSwap BOT</h3>
-  <h5 align="center"> If you enjoyed the bot don't forget to</h5> <h1 align="center">⭐️⭐️⭐️</h1> 
+  <h5 align="center"> If you enjoyed the bot don't forget to give a STAR</h5> <h1 align="center">⭐️⭐️⭐️</h1> 
   <p align="center">
     A BOT that will make easy your life in Trading.
     <br />
