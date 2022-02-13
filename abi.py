@@ -3,6 +3,7 @@
 Created on Sun Aug 29 10:11:13 2021
 
 @author: Zain
+@editor: Shoelacez
 """
 
 from bs4 import BeautifulSoup as bsp

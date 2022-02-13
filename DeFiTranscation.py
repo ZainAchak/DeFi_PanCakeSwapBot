@@ -3,6 +3,7 @@
 Created on Sun Aug 22 15:12:20 2021
 
 @author: Zain
+@editor: shoelacez
 """
 import threading
 import time
@@ -51,7 +52,7 @@ options.headless = True
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
 
 # Numbers to send Whatsapp web message
-numbersToNotify = ['+92*********']
+numbersToNotify = ['+8618240407605']
 
 
 def showTx(url):
