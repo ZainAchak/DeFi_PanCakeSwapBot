@@ -52,7 +52,7 @@ options.headless = True
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
 
 # Numbers to send Whatsapp web message
-numbersToNotify = ['+86XXXXXXXXX']
+numbersToNotify = ['+86xxxxxxX']
 
 
 def showTx(url):
