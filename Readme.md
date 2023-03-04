@@ -1,7 +1,9 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT Lpython -m venv defi-env
+pip install -r requirements.txt
+OGO -->
 <br />
 <p align="center">
   <a href="https://github.com/ZainAchak/DeFi_PanCakeSwapBot">
@@ -9,7 +11,7 @@
   </a>
 
   <h3 align="center">Defi PancakeSwap BOT</h3>
-  <h5 align="center"> If you enjoyed the bot don't forget to give a STAR</h5> <h1 align="center">⭐️⭐️⭐️</h1> 
+  <h5 align="center"> If you enjoyed the bot don't forget to give a STAR</h5> <h1 align="center">⭐️⭐️⭐️</h1>
   <p align="center">
     A BOT that will make easy your life in Trading.
     <br />
@@ -72,7 +74,7 @@ Follow the commands
 * Go to path folder
 
 * Create a python virtual environment
-  ```sh
+z  ```sh
   python -m venv defi-env
   pip install -r requirements.txt
   ```
